@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Prueba AST Crypto</title>
+</head>
+
+<body>
+    <section id="home">
+        <nav>
+            <div class="logo">
+                <h1>AST Cryptograph</h1>
+            </div>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#encrypt">Encrypt</a></li>
+                <li><a href="#decrypt">Decrypt</a></li>
+            </ul>
+        </nav>
+        <div class="contenido">
+            <div class="box">
+                <div class="title">
+                    <h2>Aplicación de criptografía</h2>
+                </div>
+                <div class="acciones">
+                    <a href="encrypt"><button class="btn">Encriptar</button></a>
+                    <a href="decrypt"><button class="btn">Desencriptar</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="encrypt">
+        <nav>
+            <div class="logo">
+                <h1>AST Cryptograph</h1>
+            </div>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#encrypt">Encrypt</a></li>
+                <li><a href="#decrypt">Decrypt</a></li>
+            </ul>
+        </nav>
+        <div class="contenido">
+            <div class="box">
+                <div class="title">
+                    <h2>Encriptar</h2>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="texto" placeholder="Texto a encriptar">
+                    <label>Texto a encriptar</label>
+                </div>
+                <p>
+                    <input type="submit" value="Encriptar">
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="decrypt">
+        <nav>
+            <div class="logo">
+                <h1>AST Cryptograph</h1>
+            </div>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#encrypt">Encrypt</a></li>
+                <li><a href="#decrypt">Decrypt</a></li>
+            </ul>
+        </nav>
+        <div class="contenido">
+            <div class="box">
+                <div class="title">
+                    <h2>Desencriptar</h2>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="texto" placeholder="Texto a desencriptar">
+                    <label>Texto a desencriptar</label>
+                </div>
+                <input id="inputFile" type="file" name="pubKey">
+                <div class="inputBox" onclick="document.getElementById('inputFile').click()">
+                    <input style="cursor: pointer;" type="text" name="texto" placeholder=" " disabled>
+                    <label id="fileText">Clic para insertar llave publica</label>
+                </div>
+                <p>
+                    <input type="submit">
+                </p>
+            </div>
+            <script>
+                document.getElementById('inputFile').addEventListener("change", () => {
+
+                    if (document.getElementById('inputFile').value) {
+                        document.getElementById('fileText').innerHTML = document.getElementById('inputFile').value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                    } else {
+                        document.getElementById('fileText').innerHTML = "Clic para insertar llave publica";
+                    }
+                });
+            </script>
+        </div>
+    </section>
+
+    <section id="result">
+        <nav>
+            <div class="logo">
+                <h1>AST Cryptograph</h1>
+            </div>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#encrypt">Encrypt</a></li>
+                <li><a href="#decrypt">Decrypt</a></li>
+            </ul>
+        </nav>
+        <div class="contenido">
+            <div class="box">
+                <div class="title">
+                    <h2>El resultado al encrypt/decrypt el texto fue:</h2>
+                </div>
+                <h3>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h3>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="error">
+        <nav>
+            <div class="logo">
+                <h1>AST Cryptograph</h1>
+            </div>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#encrypt">Encrypt</a></li>
+                <li><a href="#decrypt">Decrypt</a></li>
+            </ul>
+        </nav>
+        <div class="contenido">
+            <div class="box">
+                <div class="title">
+                    <h2>Error:</h2>
+                </div>
+                <p>El texto del error</p>
+            </div>
+        </div>
+    </section>
+
+    <ul class="lista">
+        <li><a href="#home">home</a></li>
+        <li><a href="#encrypt">encrypt</a></li>
+        <li><a href="#decrypt">decrypt</a></li>
+        <li><a href="#result">result</a></li>
+        <li><a href="#error">error</a></li>
+    </ul>
+</body>
+
+</html>
