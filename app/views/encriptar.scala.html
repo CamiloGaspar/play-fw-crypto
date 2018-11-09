@@ -1,0 +1,17 @@
+
+
+@main("Encriptar"){
+<h1>Encriptar</h1>
+@helper.form(action = routes.CryptographyController.encrypt, 'enctype -> "multipart/form-data") {
+
+<input type="text" name="texto">
+
+
+<p>
+    <input type="submit">
+</p>
+
+}
+
+
+}

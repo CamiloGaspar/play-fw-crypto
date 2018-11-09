@@ -1,0 +1,14 @@
+@main("Desencriptar"){
+<h1>Desencriptar</h1>
+@helper.form(action = routes.CryptographyController.decrypt, 'enctype -> "multipart/form-data") {
+
+<input type="text" name="texto">
+<input type="file" name="pubKey" value="Llave pública">
+
+<p>
+    <input type="submit">
+</p>
+
+}
+
+}
