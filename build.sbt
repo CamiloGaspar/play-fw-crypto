@@ -1,4 +1,4 @@
-name := """prueba-concepto"""
+name := """ast-play-cryptography"""
 organization := "com.ast"
 
 version := "1.0-SNAPSHOT"
